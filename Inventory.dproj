@@ -1,0 +1,221 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{2900879F-CD5E-463B-91A2-76241A9AED46}</ProjectGuid>
+			<ProjectVersion>12.2</ProjectVersion>
+			<MainSource>Inventory.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclimg;vcl;vclx;dbrtl;Rave90VCL;bdertl;rtl;vclactnband;vcldb;dacvcl150;dac150;crcontrols150;unidacvcl150;unidac150;VclSmp;svnui;svn;TeeUI;TeeDB;Tee;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;CodeSiteExpressVcl;ertemsoft;frxADO15;frxBDE15;frxDB15;frx15;frxDBX15;frxIBX15;fsTee15;fs15;frxTee15;fsADO15;fsBDE15;fsDB15;fsIBX15;dxCoreD15;cxEditorsD15;cxLibraryD15;cxExtEditorsD15;dxmdsD15;cxBarEditItemD15;dxBarD15;dxBarDBNavD15;dxBarExtDBItemsD15;dxBarExtItemsD15;dxRibbonD15;dxtrmdD15;dxdbtrD15;dxDockingD15;dxThemeD15;dxGDIPlusD15;dxFlowChartD15;cxPageControlD15;dxLayoutControlD15;dxNavBarD15;dxorgcD15;dxdborD15;cxGridD15;cxPivotGridD15;cxPivotGridChartD15;cxPivotGridOLAPD15;cxTreeListD15;cxTreeListdxBarPopupMenuD15;cxSchedulerD15;cxSchedulerGridD15;dxComnD15;dxsbD15;dxSkinPumpkinD15;dxSkinsCoreD15;dxSkinBlackD15;dxSkinBlueD15;dxSkinCaramelD15;dxSkinCoffeeD15;dxSkinDarkRoomD15;dxSkinDarkSideD15;dxSkinFoggyD15;dxSkinGlassOceansD15;dxSkiniMaginaryD15;dxSkinLilianD15;dxSkinLiquidSkyD15;dxSkinLondonLiquidSkyD15;dxSkinMcSkinD15;dxSkinMoneyTwinsD15;dxSkinOffice2007BlackD15;dxSkinOffice2007BlueD15;dxSkinOffice2007GreenD15;dxSkinOffice2007PinkD15;dxSkinOffice2007SilverD15;dxSkinOffice2010BlackD15;dxSkinOffice2010BlueD15;dxSkinOffice2010SilverD15;dxSkinsdxDLPainterD15;dxSkinsdxBarPainterD15;dcldxSkinsCoreD15;dxSkinscxPCPainterD15;dxSkinscxScheduler3PainterD15;dxSkinsdxNavBar2PainterD15;dxSkinsdxRibbonPainterD15;dxSkinSevenD15;dxSkinSharpD15;dxSkinSilverD15;dxSkinSpringTimeD15;dxSkinStardustD15;dxSkinSummer2008D15;dxSkinValentineD15;dxSkinXmas2008BlueD15;dxSpellCheckerD15;cxSpreadSheetD15;cxVerticalGridD15;dxPSCoreD15;dxPScxCommonD15;dxPScxExtCommonD15;dxPScxGrid6LnkD15;dxPScxPivotGrid2LnkD15;dxPScxScheduler3LnkD15;dxPScxTL5LnkD15;dxPScxVGridLnkD15;dxPSDBTeeChartD15;dxPSTeeChartD15;dxPSdxDBOCLnkD15;dxPSdxDBTVLnkD15;dxPSdxFCLnkD15;dxPSdxLC2LnkD15;dxPSdxOCLnkD15;dxPSLnksD15;dxPsPrVwAdvD15;dxPSPrVwRibbonD15;frxe15</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>.\$(Config)\$(Platform)</DCC_ExeOutput>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_DcuOutput>.\$(Config)\$(Platform)\dcu</DCC_DcuOutput>
+			<DCC_BplOutput>.\$(Config)\$(Platform)\Bpl</DCC_BplOutput>
+			<DCC_DcpOutput>.\$(Config)\$(Platform)\Dcp</DCC_DcpOutput>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Inventory.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="Main.pas">
+				<Form>MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="intemplate.pas">
+				<Form>intemplateForm</Form>
+			</DCCReference>
+			<DCCReference Include="injns.pas">
+				<Form>injnsForm</Form>
+			</DCCReference>
+			<DCCReference Include="ingol.pas">
+				<Form>ingolForm</Form>
+			</DCCReference>
+			<DCCReference Include="inmrk.pas">
+				<Form>inmrkForm</Form>
+			</DCCReference>
+			<DCCReference Include="insize.pas">
+				<Form>insizeForm</Form>
+			</DCCReference>
+			<DCCReference Include="inwrn.pas">
+				<Form>inwrnForm</Form>
+			</DCCReference>
+			<DCCReference Include="inkualitas.pas">
+				<Form>inkualitasForm</Form>
+			</DCCReference>
+			<DCCReference Include="inmotif.pas">
+				<Form>inmotifForm</Form>
+			</DCCReference>
+			<DCCReference Include="DModul.pas">
+				<Form>MastData</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="mylib.pas"/>
+			<DCCReference Include="searchtemplate.pas">
+				<Form>SearchTempleteForm</Form>
+			</DCCReference>
+			<DCCReference Include="inbrg.pas">
+				<Form>inbrgform</Form>
+			</DCCReference>
+			<DCCReference Include="infTemplate.pas">
+				<Form>inftemplateForm</Form>
+			</DCCReference>
+			<DCCReference Include="infbrg.pas">
+				<Form>infbrgForm</Form>
+			</DCCReference>
+			<DCCReference Include="fsearch.pas">
+				<Form>fsearchForm</Form>
+			</DCCReference>
+			<DCCReference Include="fsearchjenis.pas">
+				<Form>fsearchjenisform</Form>
+			</DCCReference>
+			<DCCReference Include="infbrgg.pas">
+				<Form>infbrggform</Form>
+			</DCCReference>
+			<DCCReference Include="inbrgg.pas">
+				<Form>inbrggform</Form>
+			</DCCReference>
+			<DCCReference Include="ingdg.pas">
+				<Form>ingdgform</Form>
+			</DCCReference>
+			<DCCReference Include="inkbrg.pas">
+				<Form>inkbrgform</Form>
+			</DCCReference>
+			<DCCReference Include="infkbrg.pas">
+				<Form>infkbrgform</Form>
+			</DCCReference>
+			<DCCReference Include="apval.pas">
+				<Form>apvalform</Form>
+			</DCCReference>
+			<DCCReference Include="apsup.pas">
+				<Form>apsupForm</Form>
+			</DCCReference>
+			<DCCReference Include="apfsup.pas">
+				<Form>apfsupform</Form>
+			</DCCReference>
+			<DCCReference Include="arval.pas">
+				<Form>arvalform</Form>
+			</DCCReference>
+			<DCCReference Include="arwil.pas">
+				<Form>arwilform</Form>
+			</DCCReference>
+			<DCCReference Include="arsales.pas">
+				<Form>arsalesform</Form>
+			</DCCReference>
+			<DCCReference Include="arfsales.pas">
+				<Form>arfsalesform</Form>
+			</DCCReference>
+			<DCCReference Include="armhrg.pas">
+				<Form>armhrgForm</Form>
+			</DCCReference>
+			<DCCReference Include="arfmhrg.pas">
+				<Form>arfmhrgform</Form>
+			</DCCReference>
+			<DCCReference Include="arcust.pas">
+				<Form>arcustForm</Form>
+			</DCCReference>
+			<DCCReference Include="arfcust.pas">
+				<Form>arfcustForm</Form>
+			</DCCReference>
+			<DCCReference Include="arhrgj.pas">
+				<Form>arhrgjform</Form>
+			</DCCReference>
+			<DCCReference Include="arfhrgj.pas">
+				<Form>arfhrgjform</Form>
+			</DCCReference>
+			<DCCReference Include="arphrgj.pas">
+				<Form>arphrgjform</Form>
+			</DCCReference>
+			<DCCReference Include="arkhrgj.pas">
+				<Form>arkhrgjform</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp150.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">Inventory.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
